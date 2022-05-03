@@ -10,11 +10,9 @@ import java.util.List;
 import java.util.Optional;
 
 // test 만들기 ctrl shift T
-@Service
 public class MemberService {
 
     private final MemberRepository memberRepository;
-    @Autowired
     public MemberService(MemberRepository memberRepository){
         this.memberRepository = memberRepository;
     }
