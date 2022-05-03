@@ -17,7 +17,7 @@ class MemberServiceTest {
     MemberService memberService;
     MemoryMemberRepository memberRepository;
 
-    // 이렇게하면 테스트를 실행할때마다 만들어줌.... 디펜더지 이뤡션..? 짱중요한 DI..
+    // 이렇게하면 테스트를 실행할때마다 만들어줌... 짱중요한 DI
     @BeforeEach
     public void beforeEach(){
         memberRepository = new MemoryMemberRepository();
