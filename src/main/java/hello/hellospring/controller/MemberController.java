@@ -23,6 +23,7 @@ public class MemberController {
         return "members/createMemberForm";
     }
 
+    // post 방식으로 받음 > postmapping 사용
     @PostMapping("/members/new")
     public String create(MemberForm form){
         Member member = new Member();
