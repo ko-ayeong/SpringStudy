@@ -18,6 +18,7 @@ public class MemberController {
     // 생성자 주입(권장)
     @Autowired
     public MemberController(MemberService memberService) {
+        // 인젝션
         this.memberService = memberService;
     }
 

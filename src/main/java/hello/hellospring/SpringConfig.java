@@ -1,5 +1,6 @@
 package hello.hellospring;
 
+import hello.hellospring.aop.TimeTraceAop;
 import hello.hellospring.repository.*;
 import hello.hellospring.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +35,12 @@ public class SpringConfig {
         return new MemberService(memberRepository);
     }
 
+    // 이렇게 해도 되고 아님 TimeTraceAop.java에서 @Component 해줘도 되고~
+//    @Bean
+//    public TimeTraceAop timeTraceAop(){
+//        return new TimeTraceAop();
+//    }
+
     // 이렇게 하면 인터페이스를 확장시킬 수 있음
     // 스프링 컨테이너가 이걸 지원해줌(다형성), di까지
     // 어셈블리.. 조립하는 코드만 딱 손대면 나머지 애플리케이션 코드를 손 댈 필요가 없음. 이것이 스프링 장점!
@@ -47,5 +54,7 @@ public class SpringConfig {
 //        return new JdbcTemplateMemberRepository(dataSource);
 //        return new JpaMemberRepository(em);
 //    }
+
+
 
 }
